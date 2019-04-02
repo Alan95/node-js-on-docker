@@ -5,9 +5,13 @@
 	"author": "Alan Saber",
 	"main": "server.js",
 	"scripts": {
-		"start": "node server.js"
+		"start": "node server.js",
+		"dev": "nodemon index"
 	},
 	"dependencies": {
 		"express": "^4.16.1"
+	},
+	"devDependencies": {
+		"nodemon": "^1.18.9"
 	}
 }
