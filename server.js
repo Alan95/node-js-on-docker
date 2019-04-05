@@ -7,11 +7,10 @@ const PORT = 8080;
 const HOST = '0.0.0.0';
 const path = __dirname + '/views/';
 
+const product = require('./routes/product.route');
 const app = express();
 
-app.get('/', (req, res) => {
-	res.sendFile(path + 'index.html');
-});
+app.use('/products', product);
 
 app.listen(PORT, HOST);
 console.log(`Running on https://${HOST}:${PORT}`);
