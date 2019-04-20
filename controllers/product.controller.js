@@ -25,3 +25,24 @@ exports.product_show = function (req, res, next) {
         res.status(200).send(result);
     });
 }
+
+exports.product_edit = function(req, res, next) {
+    Product.findOneAndUpdate(req.params.id, {$set: req.body}, function (err, product) {
+        if (err) {
+            res.status(400).send({'error': err});
+        }
+        res.status(200).send('Product updated');
+    }
+
+
+    )
+}
+
+exports.product_delete = function(req, res, next) {
+    Product.findByIdAndRemove(req.params.id, function (err) {
+        if (err) {
+            res.status(400).send({'error': err});
+        }
+        res.status(200).send('Deleted successfully!');
+    })
+};
