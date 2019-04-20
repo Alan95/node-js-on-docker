@@ -1,2 +1,2 @@
 # node-js-on-docker
-Node.JS on Docker
+Simple CRUD Application with Node.js, Express, MongoDB and Mongoose
